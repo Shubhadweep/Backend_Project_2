@@ -1,0 +1,39 @@
+body  {
+  font-family:  'Nunito',  sans-serif;
+  color:  #384047;
+  background-image: url('../Images/old-black-background.avif');
+  animation:  animatedBackground 40s linear infinite;
+  opacity: 0.9;
+}
+@keyframes animatedBackground  {
+  from  {
+  background-position:  0 0;
+}
+to  {
+  background-position:  100% 0;
+}
+}
+img{
+  height: 100px;
+  width: 100px;
+}
+.form-horizontal{
+  color:whitesmoke;
+}
+fieldset{
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+#legend{
+  text-align: center;
+  color: goldenrod;
+}
+#button{
+  margin-bottom: 30px;
+}
+.center{
+    align-items : center;
+    width : 500px;
+    margin : auto;
+  }
+  

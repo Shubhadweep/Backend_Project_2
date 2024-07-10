@@ -1,0 +1,109 @@
+<%- include('../Includes/header.ejs')-%>
+
+<link rel="stylesheet" href="/CSS/reg.css">
+
+</head>
+
+<body>
+    <%- include('../Includes/navbar.ejs')-%>
+    <main>
+
+        
+<form class="form-horizontal" action="/editPost" method="POST" enctype="multipart/form-data">
+    <div class="container center">
+    <fieldset>
+      <div id="legend">
+        <legend class="">Edit or update Your Details</legend>
+      </div>
+      <div class="control-group">
+        <!--For Post Submission of edit form we need Id from body-->
+        <input type="hidden" name="id" value="<%=data._id%>">
+
+        <label class="control-label"  for="fullname">Full Name</label>
+        <div class="controls">
+          <input type="text" id="fullname" name="fullname" value="<%=data.Full_Name%>" class="form-control">
+          <p class="help-block">Enter Your Full Name</p>
+        </div>
+      </div>
+   
+      <div class="control-group">
+        
+        <label class="control-label" for="email">E-mail</label>
+        <div class="controls">
+          <input type="text" readonly id="email" name="email" value="<%=data.Email%>" class="form-control">
+          <p class="help-block">Please provide your E-mail</p>
+        </div>
+      </div>
+   
+      <div class="control-group">
+      
+        <label class="control-label" for="phone">Phone</label>
+        <div class="controls">
+          <input type="number" id="phone" name="phone" value="<%=data.Phone%>" class="form-control">
+          <p class="help-block">Enter Your Phone Number</p>
+        </div>
+      </div>
+
+      <div class="control-group">
+      
+        <label class="control-label"  for="address">Address</label>
+        <div class="controls">
+          <input type="text" id="address" name="address" value="<%=data.Address%>" class="form-control">
+          <p class="help-block">Enter Your Address</p>
+        </div>
+      </div>
+
+      
+      
+      <div class="control-group">
+      
+        <label class="control-label"  for="stateName">State Name</label>
+        <div class="controls">
+         <!-- <input type="text" id="stateName" name="stateName" placeholder="" class="form-control"> -->
+          <select name="stateName" id="stateName" >
+            <option value="Select">Select</option>
+            <option value="West Bengal">West Bengal</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Goa">Goa</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Karnataka">Karnataka</option>
+          </select>
+        </div>
+        <p class="help-block">Your Existing State Name: <%=data.State_Name%></p>
+      </div><br>
+
+      
+      <div class="control-group">
+      
+        <label class="control-label"  for="zipCode">Zip Code</label>
+        <div class="controls">
+          <input type="number" id="zipCode" name="zipCode" value="<%=data.Zip_Code%>" class="form-control">
+          <p class="help-block">Enter Your Zip Code</p>
+        </div>
+      </div>
+       
+      <div class="control-group">
+      
+        <label class="control-label"  for="emp_Images">Upload Your Image(upto 3 images)</label><br>
+        <img src="/RegistrationImg/<%=data.Employee_Images[0]%>">
+        <img src="/RegistrationImg/<%=data.Employee_Images[1]%>">
+        <img src="/RegistrationImg/<%=data.Employee_Images[2]%>">
+        <p>Existing Images</p>
+        <div class="controls">
+          <input type="file" id="emp_Images" name="emp_Images" value="" class="form-control" multiple>
+        </div>
+      </div>
+
+
+   </fieldset>
+
+        <div class="btn center btn-block" id="button">
+        <a href = "#"><button class="btn btn-success btn-block" type="submit">Update Details</button></a>
+  </div>
+ </div>
+</form>
+</main>
+
+<%- include('../Includes/footer.ejs')-%>
+
+

@@ -1,0 +1,44 @@
+body {
+    background-image: url(../Images/backgroundImage1.avif);
+    background-size: cover;
+}
+.headtext{
+    background-color:goldenrod;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+}
+
+h1{
+    color: whitesmoke;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+h2{
+    color:gold;
+    
+}
+h4{
+    color: goldenrod;
+    text-align: center;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 500px; /* Set this to the height you want for the carousel */
+    object-fit: cover; /* This makes the image cover the entire area while maintaining aspect ratio */
+  }
+/*.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}*/
+.details {
+    padding: 20px;
+    color: whitesmoke;
+}
+.container{
+    margin-bottom: 50px;
+}

@@ -1,0 +1,127 @@
+<%- include('../Includes/header.ejs')-%>
+
+<link rel="stylesheet" href="/CSS/reg.css">
+
+</head>
+
+<body>
+    <%- include('../Includes/navbar.ejs')-%>
+    <main>
+
+        
+<form class="form-horizontal" action='/RegPost' method="POST" enctype="multipart/form-data">
+    <div class="container center">
+    <fieldset>
+      <div id="legend">
+        <legend class="">Register With Your Details</legend>
+      </div>
+      <div class="control-group">
+      
+        <label class="control-label"  for="fullname">Full Name</label>
+        <div class="controls">
+          <input type="text" id="fullname" name="fullname" placeholder="" class="form-control">
+          <p class="help-block">Enter Your Full Name</p>
+        </div>
+      </div>
+   
+      <div class="control-group">
+        
+        <label class="control-label" for="email">E-mail</label>
+        <div class="controls">
+          <input type="text" id="email" name="email" placeholder="" class="form-control">
+          <div>
+            <%if(errorSms){%>
+              <p class="text-danger"><%=errorSms%></p>
+            <%}%>
+          </div>
+          <p class="help-block">Please provide your E-mail</p>
+        </div>
+      </div>
+   
+      <div class="control-group">
+      
+        <label class="control-label" for="phone">Phone</label>
+        <div class="controls">
+          <input type="number" id="phone" name="phone" placeholder="" class="form-control">
+          <p class="help-block">Enter Your Phone Number</p>
+        </div>
+      </div>
+
+      <div class="control-group">
+      
+        <label class="control-label"  for="address">Address</label>
+        <div class="controls">
+          <input type="text" id="address" name="address" placeholder="" class="form-control">
+          <p class="help-block">Enter Your Address</p>
+        </div>
+      </div>
+
+      
+      <div class="control-group">
+      
+        <label class="control-label"  for="stateName">State Name</label>
+        <div class="controls">
+         <!-- <input type="text" id="stateName" name="stateName" placeholder="" class="form-control"> -->
+          <!--<p class="help-block">Enter Your State Name</p>-->
+          <select name="stateName" id="stateName">
+            <option value="Select">Select</option>
+            <option value="West Bengal">West Bengal</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Goa">Goa</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Karnataka">Karnataka</option>
+          </select>
+        </div>
+      </div><br>
+
+      
+      <div class="control-group">
+      
+        <label class="control-label"  for="zipCode">Zip Code</label>
+        <div class="controls">
+          <input type="number" id="zipCode" name="zipCode" placeholder="" class="form-control">
+          <p class="help-block">Enter Your Zip Code</p>
+        </div>
+      </div>
+   
+      <div class="control-group">
+      
+        <label class="control-label"  for="password">Password</label>
+        <div class="controls">
+          <input type="password" id="password" name="password" placeholder="" class="form-control">
+          <p class="help-block">Please Enter Your  password</p>
+        </div>
+      </div>
+
+      
+      <div class="control-group">
+      
+        <label class="control-label"  for="date">Date Of Joining</label>
+        <div class="controls">
+          <input type="date" id="date" name="date" placeholder="" class="form-control">
+          <p class="help-block">Please Enter Your Date of Joining</p>
+        </div>
+      </div>
+
+      
+      <div class="control-group">
+      
+        <label class="control-label"  for="emp_Images">Upload Your Image(upto 3 images)</label>
+        <div class="controls">
+          <input type="file" id="emp_Images" name="emp_Images" placeholder="" class="form-control" multiple>
+        </div>
+      </div>
+
+
+   </fieldset>
+
+        <div class="btn center btn-block" id="button">
+        <a href = "#"><button class="btn btn-success btn-block" type="submit">Register</button></a>
+  </div>
+ </div>
+</form>
+</main>
+
+<%- include('../Includes/footer.ejs')-%>
+
+

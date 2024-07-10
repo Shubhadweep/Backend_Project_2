@@ -1,0 +1,33 @@
+<%- include('../Includes/header.ejs')-%>
+<link rel="stylesheet" href="/CSS/login.css">
+</head>
+<body>
+    <%- include('../Includes/navbar.ejs')-%>
+<main>
+
+    <div class="login-page">
+        <div class="form">
+          <h4>Login With Your Details</h4>
+          <form class="login-form " action="/postLogin" method="POST">
+            <input type="text" name="email" placeholder="Enter Your Email-ID"/>
+            <div>
+              <%if( errEmailSms ){%>
+                <p class="text-danger"><%=errEmailSms%></p>
+              <%}%>  
+            </div>
+            <input type="password" name="password" placeholder="Enter Your Password"/>
+            <div>
+              <%if( errPasswordSms ){%>
+                <p class="text-danger"><%=errPasswordSms%></p>
+              <%}%>
+            </div>
+            <button type="submit">login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+          </form>
+        </div>
+      </div>
+
+
+</main>
+
+<%- include('../Includes/footer.ejs')-%>
